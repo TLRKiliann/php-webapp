@@ -2,7 +2,7 @@
 
 Simple php webapp to use in localhost 
 
-## Webapp with php
+## webapp with php
 
 - one head for every page
 - pages are refreshed every 30s
