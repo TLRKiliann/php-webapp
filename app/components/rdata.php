@@ -33,22 +33,24 @@ $footervar = "Read Data";
       <h1 class="contact--class">Read a file.txt</h1>
 
       <div class="segmentext">
+        <h2>This text is provided from Form page :</h2>
         <pre>
         <?php
           foreach (glob("../doc/file.txt") as $filename) { 
             readfile($filename);
           }
+        ?>
+        <pre>
+      </div>
+
+      <div>
+        <h2>This is the text that you've entered in Form page :</h2>
+        <pre>
+        <?php
           foreach (glob("../doc/file2.txt") as $filename_2) { 
             readfile($filename_2);
           }
-
-          $start_time = time();
           echo " It's finish...";
-          while(true) {
-            if ((time() - $start_time) > 1) {
-              return false;
-            }
-          }
         ?>
         </pre>
       </div>
@@ -57,7 +59,14 @@ $footervar = "Read Data";
 
     <footer>
       <?php require 'footer.php'; ?>
-    </footer>   
-
+    </footer>
+      <?php
+        $start_time = time();
+        while(true) {
+          if ((time() - $start_time) > 1) {
+            return false;
+          }
+        }
+      ?>
   </body>
 </html>
